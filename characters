@@ -1,0 +1,10 @@
+def characters():
+  character = ["Don"]
+
+class name():
+    name = input()
+    inv = []
+
+    def stats(self)
+    str = 10
+    
