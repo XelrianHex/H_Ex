@@ -1,3 +1,7 @@
+import random
+stranger = "Don"
+
+
 def fight1():
     options = ["1", "2", "3"]
     
@@ -6,7 +10,9 @@ def fight1():
     print(":%s chuckled: If you think the two of us are paying you a dime you got another thing comin'" % stranger)
     print(":The Bandits readied their weapons!")
     print("1.Fight\n2.Run\n3.Cry")
-    
+
+    minpt = 1
+    maxpt = 100
     UserInput = ""
     
     while UserInput not in options:
