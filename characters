@@ -2,9 +2,12 @@ def characters():
   character = ["Don"]
 
 class name():
-    name = input()
-    inv = []
+  def __init__(self, name):
+    self.name = input()
+    print(name)
+  def __str__(self):
+    return f"{self.name}
 
-    def stats(self)
+  def stats(self):
     str = 10
-    
+    inv = []
