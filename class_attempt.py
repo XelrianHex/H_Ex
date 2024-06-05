@@ -8,6 +8,3 @@ class Player:
 
     def __str__(self):
         return f"Stats: Name: {self.name}, Lvl: {self.lvl}"
-
-
-
