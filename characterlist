@@ -1,8 +1,7 @@
-#This will be for something else later
 def info(**kwargs):
-  for (key, value) in kwargs.items():
-    print(f"{key}: {item}")
-#potential way to list characters in game
+    for (name, title) in char.items():
+        print("%s is a %s" % (name, title))
+
 Characters = {
     "Names":{
         "Don":"Villian",
@@ -16,5 +15,5 @@ Characters = {
     }
 }
 char = Characters["Names"]
-for name, title in char.items():
-    print("%s is a %s" % (name, title))
+
+info()
