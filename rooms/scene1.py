@@ -1,8 +1,8 @@
 from rooms.depo import depo
 from rooms.fight1 import fight1
-from characterlist import Character_List
+from characterlist import Characters
 stranger = "Don"
-Character_List.append(stranger)
+
 
 
 def scene1():
@@ -31,5 +31,3 @@ def scene1():
             fight1()
         else:
             print("only the selections '1' or '2' will work.")
-
-

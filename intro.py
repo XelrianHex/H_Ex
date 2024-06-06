@@ -1,15 +1,72 @@
 from rooms.scene1 import scene1
-from characterlist import Character_List
+from characterlist import Characters
 if __name__ == "__main__":
 
-    print("You wake up in a strange bed within a rather small room.")
-    print("A foot locker sits at the end of the bed and a little table just to your right.")
-    print("Across to the left of the table is the door")
-    print("\n")
-    print(":Someone walks in to the room:")
-    print("Stranger: with a raised eyebrow he ask 'You got a name? we're gonna get you started today'")
-    name = input()
-    Character_List.insert(0, name)
-    print("Stranger: 'We'll, %s we've got some packages to get delivered." % name)
-    print("So come on...I'll explain everything on the way.")
-    scene1()
+    town = {
+        "room": {
+            "bed": "A small wood framed :bed:. On top lays a squashed pillow and scratchy sheets.",
+            "footlocker": "A rusted metal box. The lid is shut. I wonder what's in side?",
+            "table": "A little wooden :table: on which sits an empty plate and a piece of :paper:",
+            "paper": "'found you in the woods. You're safe. Be back soon.' It is not signed.",
+            "door": "A wooden :door:, and apparently the only :exit:",
+            "wall": "Do you stare at walls often?",
+            "window": "Though hazy you can some one else's home and a few trees."
+        },
+        "roomnews": {
+            "south": "A small :table: and wooden :door: are here",
+            "east": "A :window: letting the sunlight in can be seen.",
+            "west": "Just a :wall:.",
+            "north": "The :bed: you're on and the :footlocker: are pressed neatly against this side."
+        },
+        "streets": {
+            "stables": "Out front sits a sign that simply reads 'The Depo'",
+            "house": "Much like the one you left, it is a small wood :house:",
+            "market": "A wooden building with plenty of windows. A sign over head reads 'Market'."
+        }
+    }
+
+    user = ""
+    print("""**You wake up in a strange room, on a small bed. 
+    your head is throbbing and the light pouring in isn't helping.
+    you sit up on and look around the room.""")
+    print("--North, South, East or West--\n")
+
+    while user != "exit":
+
+        user = input().lower()
+        if "south" in user:
+            print(town["roomnews"]["south"])
+        elif "east" in user:
+            print(town["roomnews"]["east"])
+        elif "west" in user:
+            print(town["roomnews"]["west"])
+        elif "north" in user:
+            print(town["roomnews"]["north"])
+        elif "bed" in user:
+            print(town["room"]["bed"])
+        elif "footlocker" in user:
+            print(town["room"]["footlocker"])
+        elif "table" in user:
+            print(town["room"]["table"])
+        elif "door" in user:
+            print(town["room"]["door"])
+        elif "paper" in user:
+            print(town["room"]["paper"])
+        elif "wall" in user:
+            print(town["room"]["wall"])
+        elif "window" in user:
+            print(town["room"]["window"])
+        elif "leave" == user:
+            break
+        else:
+            print("invalid trick ass bitch")
+
+
+print("\n")
+print(":Someone walks in to the room:")
+print("Stranger: with a raised eyebrow he ask 'You got a name? we're gonna get you started today'")
+name = input()
+Characters[name] = "The player themselves."
+print("Stranger: 'We'll, %s we've got some packages to get delivered." % name)
+print("So come on...I'll explain everything on the way.")
+scene1()
