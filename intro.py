@@ -1,5 +1,5 @@
 from rooms.scene1 import scene1
-
+from characterlist import Character_List
 if __name__ == "__main__":
 
     print("You wake up in a strange bed within a rather small room.")
@@ -9,6 +9,7 @@ if __name__ == "__main__":
     print(":Someone walks in to the room:")
     print("Stranger: with a raised eyebrow he ask 'You got a name? we're gonna get you started today'")
     name = input()
+    Character_List.insert(0, name)
     print("Stranger: 'We'll, %s we've got some packages to get delivered." % name)
     print("So come on...I'll explain everything on the way.")
     scene1()
