@@ -1,7 +1,11 @@
 from rooms.scene1 import scene1
 from characterlist import Character_List
 if __name__ == "__main__":
-
+    title = "Chapter One"
+    one = title.center(60, " ")
+    
+    print(one)
+    print("\n")
     print("You wake up in a strange bed within a rather small room.")
     print("A foot locker sits at the end of the bed and a little table just to your right.")
     print("Across to the left of the table is the door")
