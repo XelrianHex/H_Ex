@@ -1,0 +1,19 @@
+def info(**kwargs):
+    for (name, title) in char.items():
+        print("%s is a %s" % (name, title))
+
+Characters = {
+    "Names":{
+        "Don":"Villian",
+        "Jax":"Medic",
+        "Ann":"Mechanic"
+    },
+    "Locations":{
+        "Depo":"Dawnbrick",
+        "Medic Hall":"Fastwind",
+        "Alter":"Hairpin"
+    }
+}
+char = Characters["Names"]
+
+info()
